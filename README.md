@@ -19,6 +19,7 @@ echo "installing django stuff"
 pip3 install django djangorestframework django-cors-headers
 echo "installing npm stuff / react stuff"
 npm install -g create-react-app
+npm install -g react-scripts
 apt remove cmdtest
 npm install -g yarn
 echo 'run these commands to set up git'
