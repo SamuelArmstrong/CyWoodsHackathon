@@ -1,8 +1,8 @@
-# CyWoodsHackathon
 ```
-#this is a test
-
 #!/bin/bash
+
+#CyWoodsHackathon
+
 echo "Setting up SSH"
 ssh-keygen -t rsa
 echo "Installing dependencies"
@@ -26,5 +26,3 @@ echo 'run these commands to set up git'
 echo 'git config --global user.email "you@example.com"'
 echo 'git config --global user.name "Your Name"'
 ```
-Hello World!
-
