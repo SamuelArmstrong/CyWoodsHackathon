@@ -2,11 +2,12 @@ from rest_framework import serializers
 from .models import School, Person
 
 class SchoolSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = School
-        fields = ('id','name')
+        fields = ('id', 'name')
 
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        fields = ('id', 'name')
+        fields = ('__all__')
