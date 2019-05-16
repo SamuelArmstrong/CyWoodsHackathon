@@ -1,12 +1,12 @@
-# CyWoodsHackathon
 ```
-#this is a test
-
 #!/bin/bash
+
+#CyWoodsHackathon
+
 echo "Setting up SSH"
 ssh-keygen -t rsa
 echo "Installing dependencies"
-apt-get install python3-pip git vim woof npm
+apt-get install python3-pip git vim woof npm tmux
 #spooky fucking microsoft ppa stuff
 echo "spooky microsoft stuff to download vscode"
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -19,11 +19,11 @@ echo "installing django stuff"
 pip3 install django djangorestframework django-cors-headers
 echo "installing npm stuff / react stuff"
 npm install -g create-react-app
+npm install -g react-scripts
 apt remove cmdtest
 npm install -g yarn
+npm install -g react-scripts
 echo 'run these commands to set up git'
 echo 'git config --global user.email "you@example.com"'
 echo 'git config --global user.name "Your Name"'
 ```
-Hello World!
-
