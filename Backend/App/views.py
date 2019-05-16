@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework import viewsets
 from rest_framework.decorators import action
+from rest_framework.exceptions import  ParseError
 from .serializers import PersonSerializer, SchoolSerializer
 from .models import Person, School
 
@@ -24,3 +25,12 @@ class SchoolViewSet(viewsets.ModelViewSet):
 class PersonViewSet(viewsets.ModelViewSet):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
+
+    @action(methods=['get'], detail=False)
+    def get_student_by_name(self, request):
+        name = request.query_params.get('name', None)
+        if name is not None:
+            serializer = PersonSerializer(get_object_or_404(Person, name__iexact=name), many=False)
+            return Response(serializer.data)
+        else:
+            raise ParseError()
