@@ -3,8 +3,6 @@
 
 #CyWoodsHackathon
 
-echo "Setting up SSH"
-ssh-keygen -t rsa
 echo "Installing dependencies"
 apt-get install python3-pip git vim woof npm tmux
 #spooky fucking microsoft ppa stuff
